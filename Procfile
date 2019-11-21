@@ -1,1 +1,1 @@
-web: npm run eject
+web: npm start
