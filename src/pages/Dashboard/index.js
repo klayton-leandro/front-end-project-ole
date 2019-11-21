@@ -21,7 +21,7 @@ const [cpf, setCPF] = useState('');
       setUsers(response.data.data);
     });
   }
-
+// eslint-disable-next-line 
   useEffect(() => {
     loadUsers();
   },[]);

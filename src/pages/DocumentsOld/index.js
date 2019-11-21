@@ -21,8 +21,9 @@ export default function DocumentsOld({ match }) {
   const [show, setShow] = useState(false);
 
   const closeModal = () => setShow(false);
-//eslint-disable-next-line
+
   const [form, setForm] = useState(false);
+  // eslint-disable-next-line 
   const handleChangeForm = id => {
     setDocumentSelected(id)
     setForm(!form);
@@ -49,7 +50,7 @@ console.log(response.data)
       setFiles(response.data);
     });
   }
-
+//eslint-disable-next-line
   useEffect(() => {
     loadDocuments();
   }, []);
