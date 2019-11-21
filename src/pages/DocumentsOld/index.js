@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 import React, { useEffect, useState, useMemo } from 'react';
 import {useSelector} from 'react-redux';
 import {Link} from "react-router-dom";
@@ -22,7 +21,7 @@ export default function DocumentsOld({ match }) {
   const [show, setShow] = useState(false);
 
   const closeModal = () => setShow(false);
-// eslint-disable-next-line
+//eslint-disable-next-line
   const [form, setForm] = useState(false);
   const handleChangeForm = id => {
     setDocumentSelected(id)
@@ -36,14 +35,14 @@ export default function DocumentsOld({ match }) {
 
   const [files, setFiles] = useState([]);
 
-// eslint-disable-next-line
+//eslint-disable-next-line
   const handleChangeDocument = id => {
     setDocumentSelected(id);
     setShow(true);
   };
 
 
-
+//eslint-disable-next-line
   async function loadDocuments() {
     api.get(`users/${id}/oldFiles`).then(response => {
 console.log(response.data)

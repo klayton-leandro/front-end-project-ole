@@ -42,7 +42,7 @@ export default function Documents({ match }) {
   };
 
 
-
+  //eslint-disable-next-line
   async function loadDocuments() {
     api.get(`users/${id}/files/`).then(response => {
       console.log(response.data)
