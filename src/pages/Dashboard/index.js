@@ -1,3 +1,4 @@
+/*eslint-disable */
 import React,{useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import api from '~/services/api';
@@ -13,7 +14,7 @@ const [cpf, setCPF] = useState('');
 
   const [users, setUsers] = useState([]);
 
-// eslint-disable-next-line
+
   async function loadUsers() {
     api.get(`users?cpf=${cpf}`).then(response => {
       // traser users do data !
@@ -21,7 +22,7 @@ const [cpf, setCPF] = useState('');
       setUsers(response.data.data);
     });
   }
-// eslint-disable-next-line 
+
   useEffect(() => {
     loadUsers();
   },[]);

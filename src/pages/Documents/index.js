@@ -1,4 +1,4 @@
-// eslint-disable-next-line
+/*eslint-disable */
 import React, { useEffect, useState, useMemo } from 'react';
 import {useSelector} from 'react-redux';
 import {Link} from "react-router-dom";
@@ -42,14 +42,13 @@ export default function Documents({ match }) {
   };
 
 
- // eslint-disable-next-line
+
   async function loadDocuments() {
     api.get(`users/${id}/files/`).then(response => {
       console.log(response.data)
       setFiles(response.data);
     });
   }
-  // eslint-disable-next-line
 
   useEffect(() => {
     loadDocuments();
@@ -84,7 +83,6 @@ export default function Documents({ match }) {
       })
       .then(response => {
           toast.info('Mensagem Enviado !');
-          // eslint-disable-next-line
           loadDocuments();
           setMessage('')
           setForm(false)

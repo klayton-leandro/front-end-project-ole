@@ -1,3 +1,4 @@
+/*eslint-disable */
 import React, { useEffect, useState, useMemo } from 'react';
 import {useSelector} from 'react-redux';
 import {Link} from "react-router-dom";
@@ -6,7 +7,7 @@ import api from '~/services/api';
 import { Container } from './styles';
 import { toast } from 'react-toastify';
 
-
+import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 import ModalImage from 'react-modal-image';
@@ -23,39 +24,38 @@ export default function DocumentsOld({ match }) {
   const closeModal = () => setShow(false);
 
   const [form, setForm] = useState(false);
-  // eslint-disable-next-line 
   const handleChangeForm = id => {
     setDocumentSelected(id)
     setForm(!form);
 
   }
 
-  // eslint-disable-next-line
+  const [message, setMessage] = useState([]);
 
   const [documentSelected, setDocumentSelected] = useState(null);
 
   const [files, setFiles] = useState([]);
 
-//eslint-disable-next-line
+
   const handleChangeDocument = id => {
     setDocumentSelected(id);
     setShow(true);
   };
 
 
-//eslint-disable-next-line
+
   async function loadDocuments() {
     api.get(`users/${id}/oldFiles`).then(response => {
 console.log(response.data)
       setFiles(response.data);
     });
   }
-//eslint-disable-next-line
+
   useEffect(() => {
     loadDocuments();
   }, []);
 
-// eslint-disable-next-line
+
   async function handleChangeStatusDocument(status) {
     await api
       .put(`/files/${documentSelected}/status`, {
