@@ -13,7 +13,7 @@ const [cpf, setCPF] = useState('');
 
   const [users, setUsers] = useState([]);
 
-
+// eslint-disable-next-line
   async function loadUsers() {
     api.get(`users?cpf=${cpf}`).then(response => {
       // traser users do data !

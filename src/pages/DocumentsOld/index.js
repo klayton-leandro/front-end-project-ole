@@ -7,7 +7,7 @@ import api from '~/services/api';
 import { Container } from './styles';
 import { toast } from 'react-toastify';
 
-import Button from 'react-bootstrap/Button';
+
 import Modal from 'react-bootstrap/Modal';
 
 import ModalImage from 'react-modal-image';
@@ -22,7 +22,7 @@ export default function DocumentsOld({ match }) {
   const [show, setShow] = useState(false);
 
   const closeModal = () => setShow(false);
-
+// eslint-disable-next-line
   const [form, setForm] = useState(false);
   const handleChangeForm = id => {
     setDocumentSelected(id)
@@ -30,13 +30,13 @@ export default function DocumentsOld({ match }) {
 
   }
 
-  const [message, setMessage] = useState([]);
+  // eslint-disable-next-line
 
   const [documentSelected, setDocumentSelected] = useState(null);
 
   const [files, setFiles] = useState([]);
 
-
+// eslint-disable-next-line
   const handleChangeDocument = id => {
     setDocumentSelected(id);
     setShow(true);
@@ -55,7 +55,7 @@ console.log(response.data)
     loadDocuments();
   }, []);
 
-
+// eslint-disable-next-line
   async function handleChangeStatusDocument(status) {
     await api
       .put(`/files/${documentSelected}/status`, {
