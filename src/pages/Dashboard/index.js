@@ -1,7 +1,7 @@
 /*eslint-disable */
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import api from '~/services/api';
 import { Container } from './styles';
 import { Link } from 'react-router-dom';
 
@@ -15,13 +15,23 @@ const [cpf, setCPF] = useState('');
   const [users, setUsers] = useState([]);
 
 
+  async function loadUsers() {
+    api.get(`users?cpf=${cpf}`).then(response => {
+      // traser users do data !
 
+      setUsers(response.data.data);
+    });
+  }
+
+  useEffect(() => {
+    loadUsers();
+  },[]);
 
   return (
     <Container>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <input className="form-control mr-sm-2" type="search" placeholder="" aria-label="Search" value={cpf} onChange={(e) => setCPF(e.target.value)}></input>
-        <button className="btn btn-primary my-2 my-sm-0 mb-3"   type="button">Pesquisar</button>
+        <button className="btn btn-primary my-2 my-sm-0 mb-3"  onClick={loadUsers} type="button">Pesquisar</button>
       </nav>
       < br />
 
