@@ -45,7 +45,7 @@ export default function Documents({ match }) {
 
   async function loadDocuments() {
     api.get(`users/${id}/files/`).then(response => {
-      console.log(response.data)
+
       setFiles(response.data);
     });
   }
