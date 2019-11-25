@@ -63,8 +63,7 @@ const [cpf, setCPF] = useState('');
               
                 <td className="table-secondary">
                 <Link
-                  to={`/users/${user.id}/files`adm
-                  }
+                  to={`/users/${user.id}/files`}
                   className="btn btn-primary"
                 >
                 DOCUMENTOS
