@@ -49,10 +49,10 @@ const [cpf, setCPF] = useState('');
           { users.map(user => {
             return(
               <tr key={user.id}>
-                <td className="table-primary">{user.name}</td>
-                <td className="table-secondary">{user.email}</td>
-                <td className="table-secondary">{user.phone}</td>
-                <td className="table-secondary ">{user.cpf}</td>
+                <td className="table-primary" colspan="2">{user.name}</td>
+                <td className="table-secondary" colspan="2" >{user.email}</td>
+                <td className="table-secondary" colspan="2" >{user.phone}</td>
+                <td className="table-secondary " colspan="2">{user.cpf}</td>
                 <td className="table-secondary">
                 <Link
                   to={`/users/${user.id}/files`}
