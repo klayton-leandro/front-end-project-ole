@@ -57,10 +57,10 @@ const [cpf, setCPF] = useState('');
           { users.map(user => {
             return(
               <tr key={user.id}>
-                <td colSpan="2">{user.name}</td>
-                <td colSpan="2">{user.email}</td>
-                <td colSpan="2">{user.phone}</td>
-                <td colSpan="2">{user.cpf}</td>
+                <td colSpan="2" style={{flex: 1, flexWrap: 'wrap'}}>{user.name}</td>
+                <td colSpan="2" style={{flex: 1, flexWrap: 'wrap'}}>{user.email}</td>
+                <td colSpan="2" style={{flex: 1, flexWrap: 'wrap'}}>{user.phone}</td>
+                <td colSpan="2" style={{flex: 1, flexWrap: 'wrap'}}>{user.cpf}</td>
               
                 <td>
                 <Link
