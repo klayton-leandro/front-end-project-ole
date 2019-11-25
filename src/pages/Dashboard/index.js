@@ -36,7 +36,7 @@ const [cpf, setCPF] = useState('');
       < br />
 
 
-      <Table responsive="sm">
+      <Table responsive="sm" variant="dark">
         <thead>
           <tr>
             <th>NOME</th>
