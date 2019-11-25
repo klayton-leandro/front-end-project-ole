@@ -4,6 +4,7 @@ import Table from 'react-bootstrap/Table'
 import api from '~/services/api';
 import { Container } from './styles';
 import { Link } from 'react-router-dom';
+import { hidden } from 'ansi-colors';
 
 
 
@@ -57,10 +58,10 @@ const [cpf, setCPF] = useState('');
           { users.map(user => {
             return(
               <tr key={user.id}>
-                <td colSpan="2" style={{position: fixed;}}>{user.name}</td>
-                <td colSpan="2" style={{position: fixed;}}>{user.email}</td>
-                <td colSpan="2" style={{position: fixed;}}>{user.phone}</td>
-                <td colSpan="2" style={{position: fixed;}}>{user.cpf}</td>
+                <td colSpan="2" style={{whiteSpace: nowrap; OverflowEvent: hidden;}}>{user.name}</td>
+                <td colSpan="2" style={{whiteSpace: nowrap; OverflowEvent: hidden;}}>{user.email}</td>
+                <td colSpan="2" style={{whiteSpace: nowrap; OverflowEvent: hidden;}}>{user.phone}</td>
+                <td colSpan="2" style={{whiteSpace: nowrap; OverflowEvent: hidden;}}>{user.cpf}</td>
               
                 <td>
                 <Link
