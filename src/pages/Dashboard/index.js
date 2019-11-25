@@ -51,6 +51,7 @@ const [cpf, setCPF] = useState('');
               <tr key={user.id}>
                 <td className="table-primary" colspan="2">{user.name}</td>
                 <td className="table-secondary" colspan="2" >{user.email}</td>
+                < hr />
                 <td className="table-secondary" colspan="2" >{user.phone}</td>
                 <td className="table-secondary " colspan="2">{user.cpf}</td>
                 <td className="table-secondary">
