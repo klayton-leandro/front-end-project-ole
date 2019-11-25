@@ -40,13 +40,12 @@ const [cpf, setCPF] = useState('');
         <thead>
           <tr>
             <th scope="col">NOME</th>
-            c
-            <br />
+         
             <th scope="col">EMAIL</th>
-            <br />
-            <br />
+    
+            
             <th scope="col">TELEFONE</th>
-            <br />
+           
             <th scope="col">CPF</th>
           </tr>
         </thead>
@@ -54,13 +53,13 @@ const [cpf, setCPF] = useState('');
           { users.map(user => {
             return(
               <tr key={user.id}>
-                <td className="table-primary" colspan="4">{user.name}</td>
+                <td className="table-primary" >{user.name}</td>
              
-                <td className="table-secondary" colspan="2" >{user.email}</td>
+                <td className="table-secondary"  >{user.email}</td>
                
-                <td className="table-secondary" colspan="2" >{user.phone}</td>
+                <td className="table-secondary" >{user.phone}</td>
            
-                <td className="table-secondary " colspan="2">{user.cpf}</td>
+                <td className="table-secondary ">{user.cpf}</td>
               
                 <td className="table-secondary">
                 <Link
