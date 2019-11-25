@@ -164,8 +164,8 @@ export default function Documents({ match }) {
             <Modal.Title>Documentos</Modal.Title>
           </Modal.Header>
           <ModalImage
-            smallSrcSet={`http://167.172.228.229:3333/files/${documentSelected}`}
-            medium={`http://167.172.228.229:3333/files/${documentSelected}`}
+            smallSrcSet={`https://159.89.224.140/files/${documentSelected}`}
+            medium={`https://159.89.224.140/files/${documentSelected}`}
             hideDownload={true}
           ></ModalImage>
          
