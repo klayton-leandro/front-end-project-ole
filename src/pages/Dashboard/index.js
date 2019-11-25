@@ -40,8 +40,10 @@ const [cpf, setCPF] = useState('');
         <thead>
           <tr>
             <th scope="col">NOME</th>
+            c
             <br />
             <th scope="col">EMAIL</th>
+            <br />
             <br />
             <th scope="col">TELEFONE</th>
             <br />
@@ -62,7 +64,8 @@ const [cpf, setCPF] = useState('');
               
                 <td className="table-secondary">
                 <Link
-                  to={`/users/${user.id}/files`}
+                  to={`/users/${user.id}/files`adm
+                  }
                   className="btn btn-primary"
                 >
                 DOCUMENTOS
