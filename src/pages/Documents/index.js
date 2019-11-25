@@ -131,8 +131,8 @@ export default function Documents({ match }) {
                     <div className="badge badge-danger">REPROVADO</div>
                   }
                   </td>
-                <td className="text-dark md-lg">{file.description}</td>
-                <td className="text-dark">{file.message}</td>
+                <td className="text-dark md-lg" style={{whiteSpace: "nowrap"}} >{file.description}</td>
+                <td className="text-dark" style={{whiteSpace: "nowrap"}} >{file.message}</td>
                 <td>
                   <button
                     className="btn btn-primary"
