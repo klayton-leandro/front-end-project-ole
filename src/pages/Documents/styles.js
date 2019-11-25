@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  max-width: 0px;
-  margin: 30px auto;
+  max-width: 150px;
+  margin: 15px auto;
 
   display: auto;
   flex-direction: column;
