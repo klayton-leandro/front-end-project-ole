@@ -1,6 +1,6 @@
 /*eslint-disable */
 import React,{useEffect, useState} from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Table from 'react-bootstrap/Table'
 import api from '~/services/api';
 import { Container } from './styles';
 import { Link } from 'react-router-dom';
@@ -36,32 +36,25 @@ const [cpf, setCPF] = useState('');
       < br />
 
 
-      <table className="table table-striped table-light">
+      <Table responsive>
         <thead>
           <tr>
-            <th scope="col">NOME</th>
-         
-            <th scope="col">EMAIL</th>
-    
-            
-            <th scope="col">TELEFONE</th>
-           
-            <th scope="col">CPF</th>
+            <th>NOME</th>
+            <th>EMAIL</th>
+            <th>TELEFONE</th>
+            <th>CPF</th>
           </tr>
         </thead>
         <tbody>
           { users.map(user => {
             return(
               <tr key={user.id}>
-                <td className="table-primary" >{user.name}</td>
-             
-                <td className="table-secondary"  >{user.email}</td>
-               
-                <td className="table-secondary" >{user.phone}</td>
-           
-                <td className="table-secondary ">{user.cpf}</td>
+                <td>{user.name}</td>
+                <td>{user.email}</td>
+                <td>{user.phone}</td>
+                <td>{user.cpf}</td>
               
-                <td className="table-secondary">
+                <td>
                 <Link
                   to={`/users/${user.id}/files`}
                   className="btn btn-primary"
@@ -69,7 +62,7 @@ const [cpf, setCPF] = useState('');
                 DOCUMENTOS
                 </Link>
                 </td>
-                <td className="table-secondary">
+                <td>
                 <Link
                   to={`/users/${user.id}/filesold`}
                   className="btn btn-warning"
@@ -82,7 +75,7 @@ const [cpf, setCPF] = useState('');
           })
           }
         </tbody>
-      </table>
+      </Table>
     </Container>
   );
 }
