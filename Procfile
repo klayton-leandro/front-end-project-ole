@@ -1,1 +1,1 @@
-web: react-app-rewired build
+web: npm start
