@@ -52,7 +52,7 @@ const [cpf, setCPF] = useState('');
                 <td className="table-primary">{user.name}</td>
                 <td className="table-secondary">{user.email}</td>
                 <td className="table-secondary">{user.phone}</td>
-                <td className="table-secondary py-3 px-md-5">{user.cpf}</td>
+                <td className="table-secondary ">{user.cpf}</td>
                 <td className="table-secondary">
                 <Link
                   to={`/users/${user.id}/files`}
