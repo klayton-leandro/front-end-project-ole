@@ -40,8 +40,11 @@ const [cpf, setCPF] = useState('');
         <thead>
           <tr>
             <th scope="col">NOME</th>
-            <th scope="col">E-MAIL</th>
+            <br />
+            <th scope="col">EMAIL</th>
+            <br />
             <th scope="col">TELEFONE</th>
+            <br />
             <th scope="col">CPF</th>
           </tr>
         </thead>
@@ -50,13 +53,13 @@ const [cpf, setCPF] = useState('');
             return(
               <tr key={user.id}>
                 <td className="table-primary" colspan="2">{user.name}</td>
-                < br />
+             
                 <td className="table-secondary" colspan="2" >{user.email}</td>
-                < br />
+               
                 <td className="table-secondary" colspan="2" >{user.phone}</td>
-                < br />
+           
                 <td className="table-secondary " colspan="2">{user.cpf}</td>
-                < br />
+              
                 <td className="table-secondary">
                 <Link
                   to={`/users/${user.id}/files`}
