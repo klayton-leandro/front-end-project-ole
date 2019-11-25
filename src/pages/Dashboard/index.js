@@ -49,6 +49,8 @@ const [cpf, setCPF] = useState('');
             <br/>
             <br />
             <th>CPF</th>
+            <br/>
+            <br/>
           </tr>
         </thead>
         <tbody>
