@@ -12,7 +12,7 @@ import history from '~/services/history';
 import { store, persistor } from './store';
 
 import GlobalStyle from '~/styles/global';
-
+// ROUTES
 export default function App() {
   return (
     <Provider store={store}>
