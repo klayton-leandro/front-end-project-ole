@@ -40,6 +40,8 @@ const [cpf, setCPF] = useState('');
         <thead>
           <tr>
             <th>NOME</th>
+            <br/>
+            <br />
             <th>EMAIL</th>
             <th>TELEFONE</th>
             <th>CPF</th>
