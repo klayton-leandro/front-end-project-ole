@@ -129,8 +129,8 @@ console.log(response.data)
           </Modal.Header>
           <span class="badge badge-primary">DOCUMENTO</span>
           <ModalImage
-            smallSrcSet={`http://167.172.228.229:3333/filesOld/${documentSelected}`}
-            medium={`http://167.172.228.229:3333/filesOld/${documentSelected}`}
+            smallSrcSet={`https://api-serversind.com/filesOld/${documentSelected}`}
+            medium={`https://api-serversind.com/filesOld/${documentSelected}`}
           ></ModalImage>
           <Modal.Footer>
 
