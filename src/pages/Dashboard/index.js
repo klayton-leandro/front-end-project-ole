@@ -43,7 +43,11 @@ const [cpf, setCPF] = useState('');
             <br/>
             <br />
             <th>EMAIL</th>
+            <br/>
+            <br />
             <th>TELEFONE</th>
+            <br/>
+            <br />
             <th>CPF</th>
           </tr>
         </thead>
