@@ -39,7 +39,7 @@ const [cpf, setCPF] = useState('');
       <table className="table table-striped table-light">
         <thead>
           <tr>
-            <th score="col">NOME</th>
+            <th scope="col">NOME</th>
             <th scope="col">E-MAIL</th>
             <th scope="col">TELEFONE</th>
             <th scope="col">CPF</th>
