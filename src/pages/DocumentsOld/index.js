@@ -15,8 +15,7 @@ import ModalImage from 'react-modal-image';
 export default function DocumentsOld({ match }) {
 
   const profile = useSelector(state => state.user.profile);
-  console.log(profile);
-
+  
   const id = useMemo(file => match.params.id, [match.params.id]);
 
   const [show, setShow] = useState(false);
@@ -46,7 +45,7 @@ export default function DocumentsOld({ match }) {
 
   async function loadDocuments() {
     api.get(`users/${id}/oldFiles`).then(response => {
-console.log(response.data)
+
       setFiles(response.data);
     });
   }
