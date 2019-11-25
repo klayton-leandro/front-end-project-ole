@@ -58,10 +58,10 @@ const [cpf, setCPF] = useState('');
           { users.map(user => {
             return(
               <tr key={user.id}>
-                <td colSpan="2" style={{whiteSpace: nowrap; OverflowEvent: hidden;}}>{user.name}</td>
-                <td colSpan="2" style={{whiteSpace: nowrap; OverflowEvent: hidden;}}>{user.email}</td>
-                <td colSpan="2" style={{whiteSpace: nowrap; OverflowEvent: hidden;}}>{user.phone}</td>
-                <td colSpan="2" style={{whiteSpace: nowrap; OverflowEvent: hidden;}}>{user.cpf}</td>
+                <td colSpan="2" style={{whiteSpace: "nowrap"}}>{user.name}</td>
+                <td colSpan="2" style={{whiteSpace: "nowrap"}}>{user.email}</td>
+                <td colSpan="2" style={{whiteSpace: "nowrap"}}>{user.phone}</td>
+                <td colSpan="2" style={{whiteSpace: "nowrap"}}>{user.cpf}</td>
               
                 <td>
                 <Link
