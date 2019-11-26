@@ -79,7 +79,7 @@ export default function DocumentsOld({ match }) {
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb bg-light">
           <Link  to="/dashboard" className="breadcrumb-item tex-dark btn btn-primary">DASHBOARD</Link>
-          <li className="breadcrumb-item active text-dark btn">DOCUMENTOS Antigos</li>
+          <li className="breadcrumb-item active text-dark btn">DOCUMENTOS ANTIGOS</li>
 
         </ol>
       </nav>

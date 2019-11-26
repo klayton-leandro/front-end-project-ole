@@ -122,7 +122,7 @@ export default function Documents({ match }) {
                     <div className="badge badge-primary">NÃO ENVIADO</div>
                   }
                   {file.file  && file.checked === null &&
-                    <div className="badge badge-warning">ESPERANDO ALISE</div>
+                    <div className="badge badge-warning">ESPERANDO ANALISE</div>
                   }
                   {file.file  && file.checked === true &&
                     <div className="badge badge-success">APROVADO</div>
