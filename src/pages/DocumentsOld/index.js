@@ -129,6 +129,8 @@ export default function DocumentsOld({ match }) {
           </Modal.Header>
           <span class="badge badge-primary" style={{fontSize: 12}} >DOCUMENTO</span>
           <ModalImage
+            showRotate={true}
+            hideDownload={true}
             smallSrcSet={`https://api-serversind.com/filesOld/${documentSelected}`}
             medium={`https://api-serversind.com/filesOld/${documentSelected}`}
           ></ModalImage>

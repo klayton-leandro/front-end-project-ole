@@ -180,7 +180,7 @@ export default function Documents({ match }) {
             smallSrcSet={`https://api-serversind.com/files/${documentSelected}`}
             medium={`https://api-serversind.com/files/${documentSelected}`}
             hideDownload={true}
-          
+            showRotate={true}
           ></ModalImage>
          
 
