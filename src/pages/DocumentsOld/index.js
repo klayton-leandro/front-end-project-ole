@@ -89,9 +89,9 @@ export default function DocumentsOld({ match }) {
           <tr>
           
 
-            <th scope="col-md-16">DESCRIÇÃO</th>
+            <th scope="col-md-16" style={{fontSize: 12}}>DESCRIÇÃO</th>
          
-            <th scope="col">AÇÕES</th>
+            <th scope="col" style={{fontSize: 12}} >AÇÕES</th>
 
           </tr>
         </thead>
