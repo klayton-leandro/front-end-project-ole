@@ -78,8 +78,8 @@ export default function DocumentsOld({ match }) {
     <Container>
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb bg-light">
-          <Link  to="/dashboard" className="breadcrumb-item tex-dark btn btn-primary">DASHBOARD</Link>
-          <li className="breadcrumb-item active text-dark btn">DOCUMENTOS ANTIGOS</li>
+          <Link  to="/dashboard" className="breadcrumb-item tex-dark btn btn-primary" style={{fontSize: 12}}>DASHBOARD</Link>
+          <li className="breadcrumb-item active text-dark btn" style={{fontSize: 12}}>DOCUMENTOS ANTIGOS</li>
 
         </ol>
       </nav>
@@ -109,8 +109,9 @@ export default function DocumentsOld({ match }) {
                     data-taggle="modal"
                     data-targe="modalfiles"
                     onClick={() => handleChangeDocument(file.id)}
+                    style={{fontSize: 12}}
                   >
-                    {documentSelected}
+                    
                     VISUALIZAR
                   </button>
                 </td>
@@ -124,9 +125,9 @@ export default function DocumentsOld({ match }) {
       {documentSelected && (
         <Modal show={show} onHide={closeModal}>
           <Modal.Header closeButton>
-            <Modal.Title>Documentos</Modal.Title>
+            <Modal.Title style={{fontSize: 12}} >Documentos</Modal.Title>
           </Modal.Header>
-          <span class="badge badge-primary">DOCUMENTO</span>
+          <span class="badge badge-primary" style={{fontSize: 12}} >DOCUMENTO</span>
           <ModalImage
             smallSrcSet={`https://api-serversind.com/filesOld/${documentSelected}`}
             medium={`https://api-serversind.com/filesOld/${documentSelected}`}

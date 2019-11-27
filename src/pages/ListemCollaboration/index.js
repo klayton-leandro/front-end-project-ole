@@ -13,21 +13,43 @@ export default function Dashboard() {
 const [cpf, setCPF] = useState('');
 
 
-  const [users, setUsers] = useState([]);
+const [users, setUsers] = useState([]);
 
 
-  async function loadUsers() {
-    api.get(`collaborators?cpf=${cpf}`).then(response => {
-      // traser users do data !
+async function loadUsers() {
+  api.get(`collaborators?cpf=${cpf}`).then(response => {
+    // traser users do data !
 
-      setUsers(response.data.data);
-    });
-  }
+    setUsers(response.data.data);
+  });
+}
 
-  useEffect(() => {
-    loadUsers();
-  },[]);
+useEffect(() => {
+  loadUsers();
   
+},[]);
+
+const handleClick = user => {
+  const requestOptions = { 
+    method: 'POST'
+  };
+}
+
+async function DeleteCollaborator(){
+  api.post(`collaborators/${user.id}/deletar`.then(response => {
+      
+    if(response){
+      status(204);
+      Alert.alert('Collaborador Excluido com sucesso')
+    }else{
+      status(400);
+      Alert.alert('Não foi possivel Exclusão do Collaborador')
+    }
+  }
+  
+  ));
+}
+
   return (
     <Container>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -65,11 +87,11 @@ const [cpf, setCPF] = useState('');
               
                 <td>
                 <Link
-                  to={`/collaborators/${user.id}/files`}
-                  className="btn btn-danger"
-                  style={{fontSize: 9}}
+               
+                  to={`/collaborators/${user.id}/deletar`}
+                  
                 >
-                DELETAR
+                <button className="btn btn-danger" onClick={() => {handleClick()}} style={{fontSize: 9}}>DELETAR</button>
                 </Link>
                 </td>
               </tr>
