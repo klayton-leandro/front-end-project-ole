@@ -22,13 +22,13 @@ return (
         <ol className="breadcrumb bg-light">
           <h5 style={{color:"#000", fontSize: 12}}>ADICIONAR UM NOVO COLABORADOR</h5>
         <Form className="px-4 py-3"  onSubmit={handleSubmit} >
-        <div className="form-group">
+        
           <Input type="name" name="name" className="form-control"  placeholder="Nome" />
           <Input type="password" name="password" className="form-control" placeholder="Senha" />
           <Input type="email"  name="email" className="form-control" placeholder="E-mail" />
           <Input type="cpf" name="cpf" className="form-control"  placeholder="CPF"/>
           <Input type="phone" name="phone" className="form-control" placeholder="11-99999-9999" />
-        </div>
+       
         <button type="submit">REGISTRAR</button>
         </Form>
         </ol>
