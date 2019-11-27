@@ -65,7 +65,7 @@ export function* signUpColla({ payload }) {
   try {
     const {name, password, email, cpf, phone } = payload;
 
-    yield call(api.post, '/users', {
+    yield call(api.post, '/collaborators', {
       name,
       password,
       email,
