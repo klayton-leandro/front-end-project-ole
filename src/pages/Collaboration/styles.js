@@ -21,6 +21,7 @@ export const Container = styled.div`
 
       &::placeholder {
         color: rgba(0, 0, 0, 0.7);
+        font-size: 12px;
       }
     }
 
@@ -40,13 +41,13 @@ export const Container = styled.div`
 
     button {
       margin: 5px 0 0;
-      height: 44px;
+      height: 25px;
       background: #003366;
       font-weight: bold;
       color: #fff;
       border: 0;
       border-radius: 4px;
-      font-size: 16px;
+      font-size: 12px;
       transition: background 0.2s;
 
       &:hover {

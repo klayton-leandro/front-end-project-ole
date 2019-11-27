@@ -26,6 +26,14 @@ export function signUpCollaboration(name, password, email, cpf, phone){
   }
 }
 
+export function signUpAdministrator(name, password, email, cpf, phone){
+  return {
+    type: '@auth/SIGN_UP_ADMINISTRATOR',
+    payload: {name, password, email, cpf, phone},
+  }
+}
+
+
 export function signFailure() {
   return {
     type: '@auth/SIGN_FAILURE',

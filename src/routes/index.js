@@ -11,7 +11,7 @@ import Documents from '~/pages/Documents';
 import Profile from '~/pages/Profile';
 import Collaboration from '~/pages/Collaboration';
 import DocumentsOld from '~/pages/DocumentsOld';
-
+import CollaboratorList from '~/pages/ListemCollaboration';
 export default function Routes() {
 
 
@@ -27,6 +27,8 @@ export default function Routes() {
       <Route exact path="/users/:id/filesold" component={DocumentsOld} isPrivate />
       <Route path="/profile" component={Profile} isPrivate />
       <Route path="/collaborator" component={Collaboration} isPrivate />
+      <Route path="/Listencollaborator" component={CollaboratorList} isPrivate />
+      
 
 
     </Switch>

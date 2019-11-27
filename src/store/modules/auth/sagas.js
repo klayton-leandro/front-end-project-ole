@@ -82,6 +82,24 @@ export function* signUpColla({ payload }) {
   }
 }
 
+export function* singUpAdmin({ payload }) {
+  try { 
+    const { name, password, email, cpf, phone } = payload;
+
+    yield call(api.post, '/admin', {
+      name,
+      password,
+      email,
+      cpf,
+      phone,
+      admin: true
+    });
+    toast.success('Administrador Adicionado !')
+  }catch(error){
+    toast.error('Não foi possivel adicionar o Administrador  [x]')
+    yield(signFailure());
+  }
+}
 
 
 export function setToken({ payload }) {

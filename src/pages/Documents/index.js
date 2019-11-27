@@ -95,8 +95,19 @@ export default function Documents({ match }) {
     <Container>
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb bg-light">
-          <Link  to="/dashboard" className="breadcrumb-item tex-dark btn btn-primary">CLIENTES</Link>
-          <li className="breadcrumb-item active text-dark btn">DOCUMENTOS</li>
+          <Link  
+          to="/dashboard" 
+          className="breadcrumb-item tex-dark btn btn-primary"
+          style={{fontSize: 12}}
+          >
+            CLIENTES
+          </Link>
+          <li 
+          className="breadcrumb-item active text-dark btn"
+          style={{fontSize: 12}}
+          >
+            DOCUMENTOS
+          </li>
 
         </ol>
       </nav>
@@ -104,11 +115,11 @@ export default function Documents({ match }) {
       <table className="table table-light table-bordered">
         <thead>
           <tr>
-            <th scope="col">STATUS</th>
+            <th scope="col" style={{fontSize: 12}} >STATUS</th>
 
-            <th scope="col-md-16">DESCRIÇÃO</th>
-            <th scope="col">MENSAGEM</th>
-            <th scope="col">AÇÕES</th>
+            <th scope="col-md-16" style={{fontSize: 12}} >DESCRIÇÃO</th>
+            <th scope="col" style={{fontSize: 12}} >MENSAGEM</th>
+            <th scope="col" style={{fontSize: 12}}>AÇÕES</th>
 
           </tr>
         </thead>
@@ -119,16 +130,16 @@ export default function Documents({ match }) {
               <tr key={file.id}>
                 <td>
                   {file.file === null &&
-                    <div className="badge badge-primary">NÃO ENVIADO</div>
+                    <div className="badge badge-primary" style={{fontSize: 12}} >NÃO ENVIADO</div>
                   }
                   {file.file  && file.checked === null &&
-                    <div className="badge badge-warning">ESPERANDO ANALISE</div>
+                    <div className="badge badge-warning" style={{fontSize: 12}} >ESPERANDO ANALISE</div>
                   }
                   {file.file  && file.checked === true &&
-                    <div className="badge badge-success">APROVADO</div>
+                    <div className="badge badge-success" style={{fontSize: 12}} >APROVADO</div>
                   }
                   {file.file  && file.checked === false &&
-                    <div className="badge badge-danger">REPROVADO</div>
+                    <div className="badge badge-danger" style={{fontSize: 12}} >REPROVADO</div>
                   }
                   </td>
                 <td className="text-dark md-lg" style={{whiteSpace: "nowrap"}} >{file.description}</td>
@@ -139,6 +150,7 @@ export default function Documents({ match }) {
                     data-taggle="modal"
                     data-targe="modalfiles"
                     onClick={() => handleChangeDocument(file.id)}
+                    style={{fontSize: 12}}
                   >
                     VISUALIZAR
                   </button>
@@ -148,6 +160,7 @@ export default function Documents({ match }) {
                     className="btn btn-warning"
                     data-taggle="modal"
                     onClick={() =>handleChangeForm(file.id)}
+                    style={{fontSize: 12}}
                   >
                     MENSAGENS
                   </button>
@@ -161,12 +174,13 @@ export default function Documents({ match }) {
       {documentSelected && (
         <Modal show={show} onHide={closeModal}>
           <Modal.Header closeButton>
-            <Modal.Title>Documentos</Modal.Title>
+            <Modal.Title  style={{fontSize: 12}} >Documentos</Modal.Title>
           </Modal.Header>
           <ModalImage
             smallSrcSet={`https://api-serversind.com/files/${documentSelected}`}
             medium={`https://api-serversind.com/files/${documentSelected}`}
             hideDownload={true}
+          
           ></ModalImage>
          
 
@@ -176,12 +190,16 @@ export default function Documents({ match }) {
               profile.admin === true && ( 
               <>
                 <div>
-                <Button onClick={() => handleChangeStatusDocument(false)} variant="danger" >
+                <Button onClick={() => handleChangeStatusDocument(false)} variant="danger" 
+                  style={{fontSize: 12}}
+                >
                   REPROVAR
                 </Button>
                 </div>
                 <div>
-                <Button onClick={() => handleChangeStatusDocument(true)} variant="success">
+                <Button onClick={() => handleChangeStatusDocument(true)} variant="success" 
+                  style={{fontSize: 12}}
+                >
                   APROVAR
                 </Button>
                 </div>
@@ -194,20 +212,20 @@ export default function Documents({ match }) {
       )}
       <Modal show={form} onHide={() => setForm(!form)}>
         <Modal.Header closeButton>
-          <Modal.Title>ENVIAR MENSAGENS</Modal.Title>
+          <Modal.Title  style={{fontSize: 12}} >ENVIAR MENSAGENS</Modal.Title>
         </Modal.Header>
           <form onSubmit={messageSubmit}>
         <Modal.Body>
             <div className="form-group"></div>
             <div className="form-group">
-              <label  className="col-form-label">
+              <label  className="col-form-label"  style={{fontSize: 12}} >
                 MENSAGEM:
               </label>
               <textarea className="form-control" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
             </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" type="submit">ENVIAR</Button>
+          <Button variant="primary" type="submit"  style={{fontSize: 12}} >ENVIAR</Button>
         </Modal.Footer>
           </form>
       </Modal>

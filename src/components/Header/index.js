@@ -19,7 +19,13 @@ export default function Header() {
       <Content>
         <nav>
           <img src={logo} alt="oleConsignado" />
-          <Link to="/dashboard">SOLUÇÃO CORRESPONDENTE</Link>
+          <Link 
+          to="/dashboard"
+          style={{fontSize: 12}}
+          >
+            SOLUÇÃO CORRESPONDENTE
+            
+          </Link>
         </nav>
 
         <aside>
@@ -33,7 +39,9 @@ export default function Header() {
                 <div>
                 <Link to="/collaborator">ADICIONAR COLABORADOR</Link>
                 </div>
-                
+                <div>
+                  <Link to="/Listencollaborator">COLABORADORES</Link>
+                  </div> 
                 </>
               )
             }

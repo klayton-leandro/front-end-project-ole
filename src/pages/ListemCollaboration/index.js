@@ -17,7 +17,7 @@ const [cpf, setCPF] = useState('');
 
 
   async function loadUsers() {
-    api.get(`users?cpf=${cpf}`).then(response => {
+    api.get(`collaborators?cpf=${cpf}`).then(response => {
       // traser users do data !
 
       setUsers(response.data.data);
@@ -65,20 +65,11 @@ const [cpf, setCPF] = useState('');
               
                 <td>
                 <Link
-                  to={`/users/${user.id}/files`}
-                  className="btn btn-primary"
+                  to={`/collaborators/${user.id}/files`}
+                  className="btn btn-danger"
                   style={{fontSize: 9}}
                 >
-                DOCUMENTOS
-                </Link>
-                </td>
-                <td>
-                <Link
-                  to={`/users/${user.id}/filesold`}
-                  className="btn btn-warning"
-                  style={{fontSize:9, whiteSpace: "nowrap"}}
-                >
-                DOCUMENTOS ANTIGOS
+                DELETAR
                 </Link>
                 </td>
               </tr>
