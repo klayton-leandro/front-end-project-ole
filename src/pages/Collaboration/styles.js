@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   max-width: 500px;
-  margin: 10px auto;
+  margin: 35px auto;
 
   form {
-    display: block;
+    display: flex;
     flex-direction: column;
     margin-top: 30px;
 
@@ -21,7 +21,6 @@ export const Container = styled.div`
 
       &::placeholder {
         color: rgba(0, 0, 0, 0.7);
-        font-size: 12px;
       }
     }
 
@@ -41,13 +40,13 @@ export const Container = styled.div`
 
     button {
       margin: 5px 0 0;
-      height: 25px;
+      height: 44px;
       background: #003366;
       font-weight: bold;
       color: #fff;
       border: 0;
       border-radius: 4px;
-      font-size: 12px;
+      font-size: 16px;
       transition: background 0.2s;
 
       &:hover {
