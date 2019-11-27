@@ -3,8 +3,6 @@ import React,{useEffect, useState} from 'react';
 import Table from 'react-bootstrap/Table'
 import api from '~/services/api';
 import { Container } from './styles';
-import { Link } from 'react-router-dom';
-import { hidden } from 'ansi-colors';
 
 
 
@@ -13,43 +11,28 @@ export default function Dashboard() {
 const [cpf, setCPF] = useState('');
 
 
-const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState([]);
 
 
-async function loadUsers() {
-  api.get(`collaborators?cpf=${cpf}`).then(response => {
-    // traser users do data !
+  async function loadUsers() {
+    api.get(`collaborators?cpf=${cpf}`).then(response => {
+      // traser users do data !
 
-    setUsers(response.data.data);
-  });
-}
-
-useEffect(() => {
-  loadUsers();
-  
-},[]);
-
-const handleClick = user => {
-  const requestOptions = { 
-    method: 'POST'
-  };
-}
-
-async function DeleteCollaborator(){
-  api.post(`collaborators/${user.id}/deletar`.then(response => {
-      
-    if(response){
-      status(204);
-      Alert.alert('Collaborador Excluido com sucesso')
-    }else{
-      status(400);
-      Alert.alert('Não foi possivel Exclusão do Collaborador')
-    }
+      setUsers(response.data.data);
+    });
   }
-  
-  ));
-}
 
+  useEffect(() => {
+    loadUsers();
+  },[]);
+  
+
+  async function handDelete(id){
+    await api.delete(`collaborators/${id}/deletar`).then( () => {
+      alert('USUARIO DELETADO COM SUCESSO [!]')
+      loadUsers();
+    })
+  }
   return (
     <Container>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -86,13 +69,8 @@ async function DeleteCollaborator(){
                 <td colSpan="2" style={{whiteSpace: "nowrap"}}>{user.cpf}</td>
               
                 <td>
-                <Link
-               
-                  to={`/collaborators/${user.id}/deletar`}
-                  
-                >
-                <button className="btn btn-danger" onClick={() => {handleClick()}} style={{fontSize: 9}}>DELETAR</button>
-                </Link>
+              
+                <button  type="button" className="btn btn-danger" onClick={() => handDelete(user.id) } style={{fontSize: 9}}>DELETAR</button>
                 </td>
               </tr>
             )
