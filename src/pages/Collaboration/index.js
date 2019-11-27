@@ -5,9 +5,10 @@ import { useDispatch } from 'react-redux';
 import { Form, Input } from '@rocketseat/unform';
 
 
-import { Container } from './styles';
+import { Container, Collaborator } from './styles';
 
 import { signUpCollaboration } from '~/store/modules/auth/actions';
+import { MdCenterFocusStrong } from 'react-icons/md';
 
 export default function Profile() {
 
@@ -18,9 +19,10 @@ export default function Profile() {
   }
 return (
     <Container>
-      <nav aria-label="breadcrumb">
-        <ol className="breadcrumb bg-light">
-          <h5 style={{color:"#000", fontSize: 12}}>ADICIONAR UM NOVO COLABORADOR</h5>
+      < hr />
+      <h1 style={{color:"#000", fontSize: 19, textAlign: 'center' }}>ADICIONAR UM NOVO COLABORADOR</h1>
+        <Collaborator>
+          
         <Form className="px-4 py-3"  onSubmit={handleSubmit} >
         
           <Input type="name" name="name" className="form-control"  placeholder="Nome" />
@@ -31,8 +33,8 @@ return (
        
         <button type="submit">REGISTRAR</button>
         </Form>
-        </ol>
-      </nav>
+        </Collaborator>
+   
     </Container>
   );
 }

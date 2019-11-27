@@ -4,6 +4,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   max-width: 500px;
   margin: 35px auto;
+  display: block;
   background-color: #fff;
   input {
       background: rgba(0, 0, 0, 0.1);
@@ -37,7 +38,20 @@ export const Container = styled.div`
       background: green;
     }
   }
-
+  hr {
+      border: 0;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.2);
+      margin: 10px 0 20px;
+    }
+  
 `;
 
 
+export const Collaborator = styled.div`
+  max-width: 500px;
+  margin: 35px auto;
+  display: block;
+  background-color: #fff;
+
+`;
