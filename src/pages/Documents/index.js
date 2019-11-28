@@ -186,8 +186,7 @@ export default function Documents({ match }) {
 
           <Modal.Footer>
 
-            {
-              profile.admin === true && ( 
+            
               <>
                 <div>
                 <Button onClick={() => handleChangeStatusDocument(false)} variant="danger" 
@@ -205,7 +204,7 @@ export default function Documents({ match }) {
                 </div>
               </>
               )
-            }
+            
 
           </Modal.Footer>
         </Modal>
